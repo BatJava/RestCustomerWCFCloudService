@@ -60,8 +60,8 @@ namespace WCFServiceWebRole1
            
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "customers/{id}")]
-         Customer UpdateCustomer(Customer customer, string id);
+            BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "customers/")]
+         Customer UpdateCustomer(Customer customer);
 
       
     }

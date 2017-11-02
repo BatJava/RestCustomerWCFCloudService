@@ -122,10 +122,10 @@ namespace WCFServiceWebRole1
             return customer;
         }
 
-        public Customer UpdateCustomer(Customer customer, string id)
+        public Customer UpdateCustomer(Customer customer)
         {
-            string id1 = customer.ID.ToString();
-            Customer oldCustomer = DeleteCustomer(id1);
+            string id = customer.ID.ToString();
+            Customer oldCustomer = DeleteCustomer(id);
             if (oldCustomer != null)
             {
                 customer.ID = oldCustomer.ID;
