@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 using WCFServiceWebRole1.Model;
 
 namespace WCFServiceWebRole1
@@ -13,7 +9,7 @@ namespace WCFServiceWebRole1
     [ServiceContract]
     public interface ICustomerService
     {
-
+        // http://restcustomerwebservice.azurewebsites.net/CustomerService.svc/customers
         //http://localhost:49972/CustomerService.svc/customers
         [OperationContract]
         void DoWork();
@@ -62,7 +58,6 @@ namespace WCFServiceWebRole1
             ResponseFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "customers/")]
          Customer UpdateCustomer(Customer customer);
-
       
     }
 }
