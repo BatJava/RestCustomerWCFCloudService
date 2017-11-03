@@ -117,7 +117,7 @@ namespace WCFServiceWebRole1
 
         public Customer AddCustomer(Customer customer)
         {            
-            customer.ID =  CustomerService.nextId++;
+            customer.ID =  CustomerService.nextId++;  //Alternatively find last element and add 1
             cList.Add(customer);
             return customer;
         }
